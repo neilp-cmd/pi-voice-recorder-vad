@@ -1,0 +1,12 @@
+[Unit]
+Description=Voice‑activated Audio Recorder
+After=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/pi-voice-recorder-vad
+ExecStart=/usr/bin/python3 /home/pi/pi-voice-recorder-vad/recorder.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
